@@ -1,0 +1,10 @@
+/* Bootstrap отвечает за сетку; здесь только оформление ShopProject. */
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+.hero { background: linear-gradient(135deg, #e7edff, #fff4e9); }
+.card { border-radius: 1rem; overflow: hidden; }
+.card-img-top { height: auto; }
+:target { scroll-margin-top: 24px; }
+.order-page { max-width: 780px; }
+a:focus-visible, button:focus-visible { outline: 3px solid #3157d5; outline-offset: 3px; }
+[hidden] { display: none !important; }
