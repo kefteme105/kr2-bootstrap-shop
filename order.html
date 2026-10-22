@@ -1,2 +1,166 @@
 <!DOCTYPE html>
-<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Оформление заявки: учебный магазин ShopProject на Bootstrap."><title>Оформление заявки — ShopProject Bootstrap</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"><link rel="stylesheet" href="css/custom.css"></head><body><header><nav class="navbar navbar-expand-lg bg-dark navbar-dark"><div class="container"><a class="navbar-brand fw-bold" href="index.html">ShopProject</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="mainNavbar"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li><li class="nav-item"><a class="nav-link" href="product.html">Товары</a></li><li class="nav-item"><a class="nav-link active" href="order.html" aria-current="page">Заявка</a></li><li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li></ul></div></div></nav></header><main class="container my-5"><section class="order-page mx-auto"><h1>Оформление заявки</h1><p class="alert alert-info">Учебная форма. Используйте вымышленные данные; отправки на сервер нет.</p><form class="order-form" id="page-form" novalidate><div class="row g-3"><div class="col-12"><label class="form-label" for="page-product">Товар</label><select class="form-select" id="page-product" name="product" required><option value="1">Товар 1 — 1 000 ₽</option><option value="2">Товар 2 — 1 500 ₽</option><option value="3">Товар 3 — 2 000 ₽</option></select></div><div class="col-12 col-md-6"><label class="form-label" for="page-name">Имя</label><input class="form-control" id="page-name" name="name" autocomplete="given-name" minlength="2" required><div class="invalid-feedback">Введите имя, не менее двух символов.</div></div><div class="col-12 col-md-6"><label class="form-label" for="page-email">E-mail</label><input class="form-control" type="email" id="page-email" name="email" autocomplete="email" required><div class="invalid-feedback">Введите корректный e-mail.</div></div><div class="col-12 col-md-6"><label class="form-label" for="page-phone">Телефон</label><div class="input-group"><span class="input-group-text" id="page-code">+7</span><input class="form-control" type="tel" inputmode="numeric" id="page-phone" name="phone" pattern="[0-9]{10}" aria-describedby="page-code page-phone-help" required></div><div class="form-text" id="page-phone-help">10 цифр без +7, например 9000000000.</div></div><div class="col-12 col-md-6"><label class="form-label" for="page-quantity">Количество</label><input class="form-control" id="page-quantity" name="quantity" type="number" value="1" min="1" max="10" required></div><div class="col-12"><label class="form-label" for="page-comment">Комментарий</label><textarea class="form-control" id="page-comment" name="comment" rows="3"></textarea></div><div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="page-agreement" name="agreement" required><label class="form-check-label" for="page-agreement">Согласен на обработку данных</label><div class="invalid-feedback">Необходимо согласие.</div></div></div></div><button class="btn btn-primary mt-4" type="submit">Проверить заявку</button><p class="alert alert-success mt-3" role="status" hidden>Заявка проверена. Данные не отправлены.</p></form></section></main><footer class="bg-dark text-white py-4"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span>ShopProject · Учебный магазин</span><span>© 2026 · КР №2</span></div></footer><div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5" id="orderModalLabel">Быстрая заявка</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть окно"></button></div><div class="modal-body"><p class="text-body-secondary">Учебная форма: данные никуда не отправляются.</p><form class="order-form" id="quick-form" novalidate><div class="row g-3"><div class="col-12"><label class="form-label" for="quick-product">Товар</label><select class="form-select" id="quick-product" name="product" required><option value="1">Товар 1 — 1 000 ₽</option><option value="2">Товар 2 — 1 500 ₽</option><option value="3">Товар 3 — 2 000 ₽</option></select></div><div class="col-12 col-md-6"><label class="form-label" for="quick-name">Имя</label><input class="form-control" id="quick-name" name="name" autocomplete="given-name" minlength="2" required><div class="invalid-feedback">Введите имя, не менее двух символов.</div></div><div class="col-12 col-md-6"><label class="form-label" for="quick-email">E-mail</label><input class="form-control" type="email" id="quick-email" name="email" autocomplete="email" required><div class="invalid-feedback">Введите корректный e-mail.</div></div><div class="col-12 col-md-6"><label class="form-label" for="quick-phone">Телефон</label><div class="input-group"><span class="input-group-text" id="quick-code">+7</span><input class="form-control" type="tel" inputmode="numeric" id="quick-phone" name="phone" pattern="[0-9]{10}" aria-describedby="quick-code quick-phone-help" required></div><div class="form-text" id="quick-phone-help">10 цифр без +7, например 9000000000.</div></div><div class="col-12 col-md-6"><label class="form-label" for="quick-quantity">Количество</label><input class="form-control" id="quick-quantity" name="quantity" type="number" value="1" min="1" max="10" required></div><div class="col-12"><label class="form-label" for="quick-comment">Комментарий</label><textarea class="form-control" id="quick-comment" name="comment" rows="3"></textarea></div><div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="quick-agreement" name="agreement" required><label class="form-check-label" for="quick-agreement">Согласен на обработку данных</label><div class="invalid-feedback">Необходимо согласие.</div></div></div></div><div class="d-flex flex-wrap gap-2 mt-4"><button type="submit" class="btn btn-primary">Проверить заявку</button><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button></div><p class="alert alert-success mt-3 mb-0" role="status" hidden>Заявка проверена. Данные не отправлены.</p></form></div></div></div></div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script><script src="js/main.js"></script></body></html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Оформление заявки: учебный магазин ShopProject на Bootstrap.">
+    <title>Оформление заявки — ShopProject Bootstrap</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">ShopProject</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html">Каталог</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Товары</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="order.html" aria-current="page">Заявка</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container my-5">
+      <section class="order-page mx-auto">
+        <h1>Оформление заявки</h1>
+        <p class="alert alert-info">Учебная форма. Используйте вымышленные данные; отправки на сервер нет.</p>
+        <form class="order-form" id="page-form" novalidate>
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="form-label" for="page-product">Товар</label>
+              <select class="form-select" id="page-product" name="product" required>
+                <option value="1">Товар 1 — 1 000 ₽</option>
+                <option value="2">Товар 2 — 1 500 ₽</option>
+                <option value="3">Товар 3 — 2 000 ₽</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="page-name">Имя</label>
+              <input class="form-control" id="page-name" name="name" autocomplete="given-name" minlength="2" required>
+              <div class="invalid-feedback">Введите имя, не менее двух символов.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="page-email">E-mail</label>
+              <input class="form-control" type="email" id="page-email" name="email" autocomplete="email" required>
+              <div class="invalid-feedback">Введите корректный e-mail.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="page-phone">Телефон</label>
+              <div class="input-group">
+                <span class="input-group-text" id="page-code">+7</span>
+                <input class="form-control" type="tel" inputmode="numeric" id="page-phone" name="phone" pattern="[0-9]{10}" aria-describedby="page-code page-phone-help" required>
+              </div>
+              <div class="form-text" id="page-phone-help">10 цифр без +7, например 9000000000.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="form-label" for="page-quantity">Количество</label>
+              <input class="form-control" id="page-quantity" name="quantity" type="number" value="1" min="1" max="10" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="page-comment">Комментарий</label>
+              <textarea class="form-control" id="page-comment" name="comment" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="page-agreement" name="agreement" required>
+                <label class="form-check-label" for="page-agreement">Согласен на обработку данных</label>
+                <div class="invalid-feedback">Необходимо согласие.</div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary mt-4" type="submit">Проверить заявку</button>
+          <p class="alert alert-success mt-3" role="status" hidden>Заявка проверена. Данные не отправлены.</p>
+        </form>
+      </section>
+    </main>
+    <footer class="bg-dark text-white py-4">
+      <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+        <span>ShopProject · Учебный магазин</span>
+        <span>© 2026 · КР №2</span>
+      </div>
+    </footer>
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="orderModalLabel">Быстрая заявка</h2>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть окно"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-body-secondary">Учебная форма: данные никуда не отправляются.</p>
+            <form class="order-form" id="quick-form" novalidate>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label" for="quick-product">Товар</label>
+                  <select class="form-select" id="quick-product" name="product" required>
+                    <option value="1">Товар 1 — 1 000 ₽</option>
+                    <option value="2">Товар 2 — 1 500 ₽</option>
+                    <option value="3">Товар 3 — 2 000 ₽</option>
+                  </select>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="quick-name">Имя</label>
+                  <input class="form-control" id="quick-name" name="name" autocomplete="given-name" minlength="2" required>
+                  <div class="invalid-feedback">Введите имя, не менее двух символов.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="quick-email">E-mail</label>
+                  <input class="form-control" type="email" id="quick-email" name="email" autocomplete="email" required>
+                  <div class="invalid-feedback">Введите корректный e-mail.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="quick-phone">Телефон</label>
+                  <div class="input-group">
+                    <span class="input-group-text" id="quick-code">+7</span>
+                    <input class="form-control" type="tel" inputmode="numeric" id="quick-phone" name="phone" pattern="[0-9]{10}" aria-describedby="quick-code quick-phone-help" required>
+                  </div>
+                  <div class="form-text" id="quick-phone-help">10 цифр без +7, например 9000000000.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="quick-quantity">Количество</label>
+                  <input class="form-control" id="quick-quantity" name="quantity" type="number" value="1" min="1" max="10" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="quick-comment">Комментарий</label>
+                  <textarea class="form-control" id="quick-comment" name="comment" rows="3"></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="quick-agreement" name="agreement" required>
+                    <label class="form-check-label" for="quick-agreement">Согласен на обработку данных</label>
+                    <div class="invalid-feedback">Необходимо согласие.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-wrap gap-2 mt-4">
+                <button type="submit" class="btn btn-primary">Проверить заявку</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+              </div>
+              <p class="alert alert-success mt-3 mb-0" role="status" hidden>Заявка проверена. Данные не отправлены.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
